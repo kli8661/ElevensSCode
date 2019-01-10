@@ -34,7 +34,9 @@ public class Card {
      *                  containing the point value of the card
      */
     public Card(String cardRank, String cardSuit, int cardPointValue) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+        this.rank = rank;
+        this.suit = suit;
+        this.pointValue = pointValue;
     }
 
 
@@ -43,7 +45,7 @@ public class Card {
      * @return this <code>Card's</code> suit.
      */
     public String suit() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+        return suit;
 
     }
 
@@ -52,7 +54,7 @@ public class Card {
      * @return this <code>Card's</code> rank.
      */
     public String rank() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+        return rank;
 
     }
 
@@ -61,7 +63,7 @@ public class Card {
      * @return this <code>Card's</code> point value.
      */
     public int pointValue() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+        return pointValue;
 
     }
 
@@ -72,7 +74,11 @@ public class Card {
      *         false otherwise.
      */
     public boolean matches(Card otherCard) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+        if (this.rank.equals(otherCard.rank) && this.suit.equals(otherCard.suit))
+        {
+            return true;
+        }
+        return false;
 
     }
 
@@ -88,7 +94,7 @@ public class Card {
      */
     @Override
     public String toString() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+        return rank + ", " + suit + ", " + pointValue;
 
     }
 }
